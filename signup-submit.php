@@ -3,7 +3,7 @@
 require_once('common.php');
 
 $name = $_POST['name'];
-$gender = $_POST['gender_male'] ?? $_POST['gender_female'];
+$gender = $_POST['gender'];
 $age = $_POST['age'];
 $personality = $_POST['personality'];
 $os = $_POST['os'];
@@ -16,7 +16,7 @@ print_header();
 
 echo '<h2>Thank you for signing up, ' . htmlspecialchars($name) . '!</h2>';
 echo '<p>Your information has been saved. You can now check your matches.</p>';
-echo '<a href="matches.php">View My Matches</a>';
+echo '<a href="matches-submit.php?name=' . urlencode($name) . '">View My Matches</a>';
 
 print_footer();
 

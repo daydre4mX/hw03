@@ -12,9 +12,9 @@ echo '<form action="signup-submit.php" method="post">
          <input type="text" name="name" id="Name" size="16" maxlength="16" required/>
          <br>
          <label for="Gender" class="left">Gender:</label>
-         <input type="radio" id="gender_male" name="gender_male" value="Male" required/>
+         <input type="radio" id="gender_male" name="gender" value="M" required/>
          <label for="gender_male">Male</label>
-         <input type="radio" id="gender_female" name="gender_female" value="Female" checked required/>
+         <input type="radio" id="gender_female" name="gender" value="F" checked required/>
          <label for="gender_female">Female</label>
          <br>
          <label for="Age" class="left">Age:</label>
