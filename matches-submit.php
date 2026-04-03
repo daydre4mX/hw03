@@ -9,7 +9,7 @@ $name = isset($_GET['name']) ? $_GET['name'] : '';
 if (empty($name)) {
     echo '<p>Please enter your name.</p>';
 } else {
-    $matches = get_matches($name);
+    $matches = find_matches($name);
 
     if (empty($matches)) {
         echo '<p>No matches found for ' . htmlspecialchars($name) . '.</p>';

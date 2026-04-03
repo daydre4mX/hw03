@@ -28,19 +28,6 @@ function print_footer() {
 </html>';
 }
 
-function get_matches($name) {
-    $matches = array();
-    $matchFile = fopen('datasets/all-matches.txt', 'r');
-    while (!feof($matchFile)) {
-        $line = fgets($matchFile);
-        $parts = explode(',', $line);
-        if (count($parts) >= 2 && trim($parts[0]) === $name) {
-            $matches[] = trim($parts[1]);
-        }
-    }
-    fclose($matchFile);
-    return $matches;
-}
 
 function get_user_info($name) {
     $userInfo = array();
@@ -112,5 +99,19 @@ function find_matches($name) {
         $matches[] = $c_name;
     }
     fclose($singlesFile);
+    return $matches;
+}
+
+function get_matches($name) {
+    $matches = array();
+    $matchFile = fopen('datasets/all-matches.txt', 'r');
+    while (!feof($matchFile)) {
+        $line = fgets($matchFile);
+        $parts = explode(',', $line);
+        if (count($parts) >= 2 && trim($parts[0]) === $name) {
+            $matches[] = trim($parts[1]);
+        }
+    }
+    fclose($matchFile);
     return $matches;
 }
