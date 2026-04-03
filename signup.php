@@ -9,19 +9,19 @@ echo '<form action="signup-submit.php" method="post">
         <legend>New User Signup:</legend>
         <!-- Add form fields here -->
          <label for="Name" class="left" >Name:</label>
-         <input type="text" name="name" id="Name" size="16" maxlength="16"/>
+         <input type="text" name="name" id="Name" size="16" maxlength="16" required/>
          <br>
          <label for="Gender" class="left">Gender:</label>
-         <input type="radio" id="gender_male" name="gender_male" value="Male" />
+         <input type="radio" id="gender_male" name="gender_male" value="Male" required/>
          <label for="gender_male">Male</label>
-         <input type="radio" id="gender_female" name="gender_female" value="Female" checked />
+         <input type="radio" id="gender_female" name="gender_female" value="Female" checked required/>
          <label for="gender_female">Female</label>
          <br>
          <label for="Age" class="left">Age:</label>
-         <input type="text" name="age" id="Age" size="6" maxlength="2" />
+         <input type="text" name="age" id="Age" size="6" maxlength="2" required/>
          <br>
          <label for="Personality" class="left">Personality Type:</label>
-        <input type="text" name="personality" id="Personality" size="6" maxlength="4"/>
+        <input type="text" name="personality" id="Personality" size="6" maxlength="4" required/>
         <br>
         <label for="OS" class="left">Favorite OS:</label>
         <select name="os" id="OS">
@@ -31,9 +31,9 @@ echo '<form action="signup-submit.php" method="post">
         </select>
          <br>
         <label for="Seeking" class="left">Seeking Age:</label>
-        <input type="text" name="min_age" id="min_age" placeholder="Min" size="6" maxlength="2"/> 
+        <input type="text" name="min_age" id="min_age" placeholder="Min" size="6" maxlength="2" required/>
         <label for="max_age">to</label>
-        <input type="text" name="max_age" id="max_age" placeholder="Max" size="6" maxlength="2"/>
+        <input type="text" name="max_age" id="max_age" placeholder="Max" size="6" maxlength="2" required/>
         <br>
         <input type="submit" value="Sign Up" /> 
         </fieldset>
