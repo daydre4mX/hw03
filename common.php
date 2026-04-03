@@ -56,3 +56,10 @@ function get_user_info($name) {
     fclose($userFile);
     return $userInfo;
 }
+
+function save_user_info($name, $gender, $age, $personality, $os, $min_age, $max_age) {
+    $userInfo = array($name, $gender, $age, $personality, $os, $min_age, $max_age);
+    $userFile = fopen('datasets/singles.txt', 'a');
+    fputcsv($userFile, $userInfo);
+    fclose($userFile);
+}
